@@ -1,0 +1,203 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+body {
+  font: "Heebo", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 130px;
+  margin-left: 30px;
+  background-color: #09182c;
+  line-height: 1.5;
+}
+
+@media all and (max-width: 768px) {
+  body {
+    margin-top: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1rem;
+  }
+}
+
+.type-thin {
+  font-family: "Heebo", sans-serif;
+  font-weight: 100;
+}
+
+.type-light {
+  font-family: "Heebo", sans-serif;
+  font-weight: 300;
+}
+
+.type-regular {
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+}
+
+.type-medium {
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+}
+
+.type-bold {
+  font-family: "Heebo", sans-serif;
+  font-weight: 700;
+}
+
+.type-h1 {
+  font-size: 2.7rem;
+}
+
+.type-h2 {
+  font-size: 2rem;
+}
+
+.type-h3 {
+  font-size: 1.5rem;
+}
+
+.type-h4 {
+  font-size: 1.25rem;
+}
+
+.type-h5 {
+  font-size: 1.125rem;
+}
+
+.c-blanco {
+  color: #ffffff;
+}
+
+.c-fondo {
+  color: #09182c;
+}
+
+.c-azul {
+  color: #003479;
+}
+
+.c-rosa {
+  color: #D45153;
+}
+
+.c-violeta {
+  color: #8E3478;
+}
+
+.c-gris {
+  color: #bababa;
+}
+
+.c-celeste {
+  color: #72d0eb;
+}
+
+.c-negro {
+  color: #000000;
+}
+
+@media all and (min-width: 769px) {
+  .type-h1 {
+    font-size: 3.24rem;
+  }
+  .type-h2 {
+    font-size: 2.4rem;
+  }
+  .type-h3 {
+    font-size: 1.8rem;
+  }
+  .type-h4 {
+    font-size: 1.5rem;
+  }
+  .type-h5 {
+    font-size: 1.35rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+p {
+  color: #ffffff;
+}
+
+.margenDiv {
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+
+.textoDerecha {
+  text-align: right;
+}
+
+.textoIzquierda {
+  text-align: left;
+}
+
+.textoIzquierdaS {
+  text-align: left;
+}
+
+.textoCentrado {
+  text-align: center;
+}
+
+
+.recibe {
+  padding: 100px 60px;
+}
+
+.recibe__Icon {
+  color: #72d0eb;
+  -webkit-transform: scale(4);
+          transform: scale(4);
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  padding: 15px;
+  margin-bottom: 30px;
+  margin-top: 120px;
+}
+
+.recibe__Icon:hover {
+  -webkit-transform: scale(4.3);
+          transform: scale(4.3);
+  background: linear-gradient(200deg, #72d0eb 0%, #b968a5 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+
+
+footer {
+  background-color: #09182c;
+  border-top: #72d0eb 1px solid;
+  margin-top: 1.25em;
+  margin-right: 1em;
+  margin-bottom: 20px;
+}
+
+footer h5 {
+  margin-top: 1.5em;
+  margin-bottom: -0.3em;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer a:hover {
+  -webkit-transform: scale(4.3);
+          transform: scale(4.3);
+  background: linear-gradient(200deg, #72d0eb 0%, #b968a5 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
