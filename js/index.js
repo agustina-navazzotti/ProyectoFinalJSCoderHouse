@@ -3,10 +3,10 @@
 //construcción del objeto tarea
 
 class Tarea {
-    constructor(nombre, dificultad) {
+    constructor(nombre, prioridad, responsable) {
         this.nombre  = nombre.toUpperCase();
-        this.prioridad  = parseFloat(dificultad);
-        this.resposable = resposable.toUpperCase();
+        this.prioridad  = parseFloat(prioridad);
+        this.responsable = responsable.toUpperCase();
         this.realizada = false;
     }
 
@@ -17,7 +17,7 @@ class Tarea {
 
 //declaración de arreglo para almacenar tareas
 
-const tareas = [];
+var tareas = [];
 
 alert("Realizá tu lista de tareas");
 
@@ -28,9 +28,10 @@ while (opcion != 7){
         case 1:
             //cargar nueva tarea al arreglo "tareas"
             let nom = prompt("Tarea pendiente: \n");
-            let prio = prompt("Evalue la prioridad del 1 al 5. 5 equivale a prioridad máxima, 1 a mínima prioridad \n");
+            let prio = parseInt(prompt("Evalue la prioridad del 1 al 5. 5 equivale a prioridad máxima, 1 a mínima prioridad \n"));
             let res = prompt("Asigná un responsable a la tarea \n");
             tareas.push(new Tarea(nom, prio, res));
+            console.log(`Tarea asignada: \n Nombre: ${nom} \n Prioridad: ${prio} \n Responsable: ${res}`);
             break;
         case 2:
             let tar = prompt("Escribe la tarea realizada: \n");
