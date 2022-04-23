@@ -1,1 +1,0 @@
-//este programa gestiona tareas

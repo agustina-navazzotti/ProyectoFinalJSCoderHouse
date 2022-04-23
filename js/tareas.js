@@ -2,7 +2,7 @@
 
 class Tarea {
     constructor(nombre, prioridad, responsable) {
-        this.nombre  = nombre.toUpperCase();
+        this.nombre = nombre.toUpperCase();
         this.prioridad  = parseFloat(prioridad);
         this.responsable = responsable.toUpperCase();
         this.realizada = false;
@@ -13,21 +13,31 @@ class Tarea {
     }
 }
 
-//declaración de arreglo para almacenar tareas
+//declaración de arreglo para almacenar tareas pendientes
 
-var tareas = [];
-
+var tareasPendientes = [];
 
 //añadir nueva tarea
 let botonTarea = document.getElementById("btnTask");
-botonTarea.onclick = () => {
-    let nom = document.getElementById("tarea");
-    let prio = document.getElementById("prioridad");
-    let res = document.getElementById("responsable");
-    tareas.push(new Tarea(nom, prio, res));
+botonTarea.addEventListener("click", () => {
+    let nom = document.getElementById("tarea").value;
+    let prio = document.getElementById("prioridad").value;
+    let res = document.getElementById("responsable").value;
+    tareasPendientes.push(new Tarea(nom, prio, res));
     alert(`Tarea asignada: \n Nombre: ${nom} \n Prioridad: ${prio} \n Responsable: ${res}`);
-}
+    localStorage.setItem("task", JSON.stringify(tareasPendientes));
+})
 
+//marcar tarea como realizada
+
+let tareaCompleta = document.getElementById("tareaRealizada");
+tareaCompleta.addEventListener("click", () => {
+    let tar = prompt("Escribe la tarea realizada: \n");
+    let i = localStorage.getItem(JSON.parse(tareasPendientes).indexOf(tar.toUpperCase));
+    tareasPendientes[i].hacerTarea();
+    alert(`Tarea completa`);
+    localStorage.setItem("task", JSON.stringify(tareas));
+})
 
 /* var opcion = parseInt(prompt("MENÚ (Elegí una opción para realizar una acción: \n 1. Agregar tarea pendiente \n 2. Marcar tarea como realizada \n 3. Filtrar tareas urgentes y prioritarias \n 4.Mostrar lista de tareas pendientes \n 5. Mostrar tareas que tengan de responsable a \n 6. Imprimir  lista de tareas completa (responsables, prioridad y estado) \n 7. Para salir \n"));
 
