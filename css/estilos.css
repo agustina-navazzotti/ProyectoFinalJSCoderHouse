@@ -7,7 +7,8 @@ body {
   font-weight: 400;
   text-decoration: none;
   margin-top: 130px;
-  margin-left: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
   background-color: #020202;
   line-height: 1.5;
 }
@@ -562,6 +563,14 @@ p {
   margin-bottom: 40px;
 }
 
+.columna {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
+}
+
+
 .ficha {
   border-radius: 1%;
   -webkit-transition: 1000ms;
@@ -570,6 +579,7 @@ p {
   margin-top: 5px;
   margin-bottom: 5px;
   background-color: #151515;
+  padding: 25px;
 }
 
 .ficha:hover {
