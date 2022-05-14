@@ -34,12 +34,18 @@
         <div class="container-fluid">
             <div class="row no-gutters">
                 <div class="col-12 offset-md-2 col-md-10 col-lg-8 offset-lg-4">
-                    <form class="forms">
-                        <input type="text" name="nombre_apellido" placeholder="Nombre" autocomplete="off" class="forms__input" id="nombre"/>
-                        <input type="email" name="correo_electrónico" placeholder="Correo electrónico" autocomplete="off"  class="forms__input" id="correo"/>
-                        <textarea name=consulta placeholder="Envianos tu consulta"  class="forms__textarea" id="sugerencia"></textarea>
-                        <button type="submit" class="tarea__button" id="bntContacto"><i class="fas fa-arrow-circle-right" alt="Enviar formulario"></i></button> 
+                    <form class="forms" id="form">
+                        <input type="text" name="name" placeholder="Nombre" autocomplete="off" class="forms__input" id="nombre"/>
+                        <input type="email" name="email" placeholder="Correo electrónico" autocomplete="off"  class="forms__input" id="correo"/>
+                        <textarea name="menssage" placeholder="Envianos tu consulta"  class="forms__textarea" id="sugerencia"></textarea>
+                        <input type="submit" id="button" value="ENVIAR MENSAJE" class="tarea__button">
                     </form>
+                    <script type="text/javascript"
+                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+                    </script>
+                    <script type="text/javascript">
+                     emailjs.init('8I2iNaD3JLBKLUPKE')
+                    </script>
                 </div>
             </div>
     </div>

@@ -1,3 +1,25 @@
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_ymeqxtc';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'ENVIAR MENSAJE';
+      menEnviado();
+    }, (err) => {
+      btn.value = 'ENVIAR MENSAJE';
+      menNoEnviado();
+      //alert(JSON.stringify(err));
+    });
+});
+
 function menEnviado(){
     Swal.fire({
         icon: 'success',
@@ -17,21 +39,3 @@ function menNoEnviado(){
         timer: 3000
     });
 }
-
-let nuevoContacto = document.getElementById("bntContacto");
-nuevoContacto.addEventListener("submit", () => {
-    let nom = document.getElementById("nombre").value;
-    let corr = document.getElementById("correo").value;
-    let sug = document.getElementById("sugerencia").value;
-    fetch("https://formsubmit.co/ajax/marianavazzotti@gmail.com", {
-    method: "POST",
-    headers: { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    },
-    body: JSON.stringify(new Tarea(nom, corr, sug))
-    })
-    .then(response => response.json())
-    .then(menEnviado())
-    .catch(menNoEnviado);
-});
