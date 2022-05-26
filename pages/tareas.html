@@ -38,22 +38,18 @@
 		<a><i class="fas fa-paper-plane type-h1 tarea__button--mod"></i></a>
 	</div>
 	<section>
-		<div class="container-fluid">
-			<div class="row no-gutters">
-				<div class="col-12 offset-md-2 col-md-10 col-lg-8 offset-lg-4">
-					<div class="forms">
-						<input type="text" name="nombre_apellido" placeholder="Nueva tarea" autocomplete="off" class="forms__input" id="tarea"/>
-						<input type="number" name="prioridad" placeholder="Establece la prioridad (1 a 5)" autocomplete="off"  class="forms__input" id="prioridad"/>
-						<input type="text" name="responsable" placeholder="Responsable" autocomplete="off"  class="forms__input" id="responsable"/>
-						<button class="tarea__button" id="btnTask"><i class="bi bi-arrow-up-circle-fill" alt="Cargar nueva tarea"></i></button>
-					</div> 
-				</div>
+		<div class="forms row">
+			<div>
+				<input type="text" name="nombre_apellido" placeholder="Nueva tarea" autocomplete="off" class="forms__input col-12 col-md-12 col-lg-4" id="tarea"/>
+				<input type="number" name="prioridad" placeholder="Establece la prioridad (1 a 5)" autocomplete="off"  class="forms__input col-12 col-md-12 col-lg-3" id="prioridad"/>
+				<input type="text" name="responsable" placeholder="Responsable" autocomplete="off"  class="forms__input col-12 col-md-12 col-lg-3" id="responsable"/>
+					<button class="tarea__button" id="btnTask"><i class="bi bi-arrow-up-circle-fill" alt="Cargar nueva tarea"></i></button>
 			</div>
 		</div>
 	</section>
 	<section>
 		<div class="container-fluid row no-gutters">
-			<div class="col-12 col-md-4 col-lg-5 ficha text-center" id="tareaRealizada">
+			<div class="col-12 col-md-4 col-lg-4 ficha text-center" id="tareaRealizada">
 				<div class="card-body">
 				  <h5 class="type-h3"><i class="fa-solid fa-fish ficha__i"></i></h5>
 				  <p class="card-text ficha__text">Marcar tarea como realizada</p>
@@ -65,7 +61,7 @@
 				  <p class="card-text ficha__text">Filtrar tareas prioritarias</p>
 				</div>
 			</div>
-			<div class="col-12 col-md-4 col-lg-4 ficha text-center">
+			<div class="col-12 col-md-4 col-lg-3 ficha text-center">
 				<div class="card-body">
 				  <h5 class="type-h3"><i class="fa-solid fa-heart-crack ficha__i"></i></h5>
 				  <p class="card-text ficha__text">Lista de tareas pendientes</p>
@@ -73,19 +69,19 @@
 			</div>
 		</div>
 		<div class="container-fluid row no-gutters">
-			<div class="col-12 col-md-4 col-lg-4 ficha text-center">
+			<div class="col-12 col-md-4 col-lg-3 ficha text-center">
 				<div class="card-body">
 				  <h5 class="type-h3"><i class="fa-solid fa-person ficha__i"></i></h5>
 				  <p class="card-text ficha__text">Filtrar tareas por responsable</p>
 				</div>
 			  </div>
-			  <div class="col-12 col-md-4 col-lg-3 ficha text-center">
+			  <div class="col-12 col-md-4 col-lg-2 ficha text-center">
 				<div class="card-body">
 				  <h5 class="type-h3"><i class="fa-solid fa-eraser ficha__i"></i></h5>
 				  <p class="card-text ficha__text">Borrar una tarea pendiente</p>
 				</div>
 			  </div>
-			  <div class="col-12 col-md-4 col-lg-5 ficha text-center">
+			  <div class="col-12 col-md-4 col-lg-4 ficha text-center">
 				<div class="card-body">
 				  <h5 class="type-h3"><i class="fa-solid fa-face-laugh-beam ficha__i"></i></h5>
 				  <p class="card-text ficha__text">Lista de tareas completadas</p>

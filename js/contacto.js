@@ -16,7 +16,6 @@ document.getElementById('form')
     }, (err) => {
       btn.value = 'ENVIAR MENSAJE';
       menNoEnviado();
-      //alert(JSON.stringify(err));
     });
 });
 
@@ -26,7 +25,12 @@ function menEnviado(){
         title: '¡Genial!',
         text: 'Gracias por tu mensaje',
         showConfirmButton: false,
-        timer: 3000
+        timer: 3000,
+        color: '#f6f6f6',
+        background: '#020202',
+        iconHtml:'<i class="bi bi-heart-fill type-h3"></i>',
+        iconColor:'#F1A9A0',
+        backdrop: `rgba(255, 255, 255, 0.27)`
     });
 }
 
@@ -36,6 +40,11 @@ function menNoEnviado(){
         title: '¡Ups!',
         text: 'Tu mensaje no puedo ser enviado',
         showConfirmButton: false,
-        timer: 3000
+        timer: 3000,
+        color: '#f6f6f6',
+        background: '#020202',
+        iconHtml:'<i class="bi bi-heartbreak-fill type-h3"></i>',
+        iconColor:'#F1A9A0',
+        backdrop: `rgba(255, 255, 255, 0.27)`
     });
 }

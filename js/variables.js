@@ -7,6 +7,9 @@ class Tarea {
         this.responsable = responsable.toUpperCase();
         this.realizada = false;
     }
+    hacerTarea(){
+        this.realizada = false;
+    }
 }
 
 //construcción del obejto persona contacto

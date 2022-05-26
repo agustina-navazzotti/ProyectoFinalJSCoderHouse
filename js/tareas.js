@@ -1,5 +1,4 @@
 
-
 //almacenar tarea por tarea
 const guardarTareas = (c, v) => {localStorage.setItem(c, v)};
 
@@ -18,31 +17,53 @@ botonTarea.addEventListener("click", () => {
         title: '¡MIAU!',
         text: 'Tu tarea se cargó correctamente',
         showConfirmButton: false,
-        timer: 3000
+        timer: 3000,
+        color: '#f6f6f6',
+        background: '#020202',
+        iconHtml:'<i class="bi bi-check-circle-fill type-h3"></i>',
+        iconColor:'#F1A9A0',
+        backdrop: `rgba(255, 255, 255, 0.27)`
       });
     guardarTareas("task", JSON.stringify(tareasPendientes)); 
 });
 
 
-//marcar tarea como realizada
-
 let tareaCompleta = document.getElementById("tareaRealizada");
 tareaCompleta.addEventListener("click", () => {
     let tar = (prompt("Escribe la tarea realizada: \n")).toUpperCase();
     let taskSec =JSON.parse(localStorage.getItem('task'));
-    let i;
-    taskSec.forEach(Tarea =>{
-        Tarea.nombre === tar && (i= taskSec.indexOf(Tarea));
-        }
-    );
-    tareasPendientes[i].realizada = true; 
-    Swal.fire({
-        icon: 'success',
-        title: '¡Qué rico!',
-        text: 'Completaste tu tarea correctamente y alimentaste a tu michi virtual',
-        showConfirmButton: false,
-        timer: 3000
-      });
-    localStorage.setItem("task", JSON.stringify(tareasPendientes));
+    const o = taskSec.findIndex(e => {
+      return e.nombre === tar;
+    });
+    console.log(o);
+    if (o > -1){
+      taskSec[o].realizada = true;
+      mensTareCom();
+    }else{
+      mensTareNoEn();
+    }
+
+    localStorage.setItem("task", JSON.stringify(taskSec));
 })
 
+//funciones auxiliares
+
+function mensTareCom() {
+  Swal.fire({
+    icon: 'success',
+    title: '¡Qué rico!',
+    text: 'Completaste tu tarea correctamente y alimentaste a tu michi virtual',
+    showConfirmButton: false,
+    timer: 3000
+  });
+}
+
+function mensTareNoEn() {
+  Swal.fire({
+    icon: 'success',
+    title: 'Errooor',
+    text: 'No encontramos la tarea',
+    showConfirmButton: false,
+    timer: 3000
+  });
+}

@@ -68,7 +68,7 @@ body {
 }
 
 .c-blanco {
-  color: #ffffff;
+  color: #f6f6f6;
 }
 
 .c-fondo {
@@ -92,7 +92,7 @@ body {
 }
 
 .c-celeste {
-  color: #72d0eb;
+  color: #F1A9A0;
 }
 
 .c-negro {
@@ -159,7 +159,7 @@ header nav svg {
 }
 
 header nav button{
-  color: #ffffff;
+  color: #f6f6f6;
   background: none;
   border: none;
   font-size: 1.2em;
@@ -183,17 +183,17 @@ header nav ul li {
   margin: 0 25px;
   font: "Poppins", sans-serif;
   text-align: center;
-  color: #ffffff;
+  color: #f6f6f6;
 }
 
 header nav ul li a {
-  color: #ffffff;
+  color: #f6f6f6;
   padding: 8px;
   margin: auto;
 }
 
 header nav ul li a:hover {
-  color: #72d0eb;
+  color: #F1A9A0;
   text-decoration: none;
 }
 
@@ -247,7 +247,7 @@ header nav ul li a:hover {
 }
 
 p {
-  color: #ffffff;
+  color: #f6f6f6;
 }
 
 .margenDiv {
@@ -272,26 +272,23 @@ p {
 }
 
 .forms {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  margin: 2.5em;
+  padding: 6px;
 }
 
 .forms__input {
   margin-top: 15px;
   -webkit-transition: 500ms;
   transition: 500ms;
-  background-color: #020202;
-  color: #ffffff;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0.2;
-  border-color: #72d0eb;
+  background-color: #151515;
+  color: #f6f6f6;
+  border: 0;
+  padding: 6px;
+  margin-right: 1em;
+  margin-left: -0.5em;
+  border-radius: 1.5%;
 }
 
 .forms__input:hover {
@@ -311,12 +308,12 @@ p {
   transition: 500ms;
   height: 10em;
   background-color: #020202;
-  color: #ffffff;
+  color: #f6f6f6;
   border-top: 0;
   border-left: 0;
   border-right: 0;
   border-bottom: 0.5;
-  border-color: #72d0eb;
+  border-color: #F1A9A0;
 }
 
 .forms__textarea:hover {
@@ -331,7 +328,7 @@ p {
 
 .servicios {
   background-color: #020202;
-  border: #72d0eb 1px solid;
+  border: #F1A9A0 1px solid;
   border-radius: 2%;
   margin-left: 75px;
   margin-top: -10px;
@@ -340,7 +337,7 @@ p {
           transform: scale(1);
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
-  color: #ffffff;
+  color: #f6f6f6;
 }
 
 
@@ -354,11 +351,11 @@ p {
   transition: 500ms;
   text-align: center;
   font-size: 30px;
-  color: #72d0eb;
+  color: #F1A9A0;
 }
 
 .tarea__button:hover {
-  background: linear-gradient(200deg, #72d0eb 0%, #B29DE6 100%);
+  background: linear-gradient(200deg, #F1A9A0 0%, #B29DE6 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -369,7 +366,7 @@ p {
 }
 
 .tarea__button--mod {
-  color: #72d0eb;
+  color: #F1A9A0;
   -webkit-transition: 600ms;
   transition: 600ms;
 }
@@ -377,7 +374,7 @@ p {
 .tarea__button--mod:hover {
   -webkit-transform: rotate(140deg);
           transform: rotate(140deg);
-  background: linear-gradient(200deg, #72d0eb 0%, #B29DE6 100%);
+  background: linear-gradient(200deg, #F1A9A0 0%, #B29DE6 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -419,7 +416,6 @@ p {
   justify-content: center;
 }
 
-
 .ficha {
   border-radius: 1%;
   -webkit-transition: 1000ms;
@@ -432,13 +428,13 @@ p {
 }
 
 .ficha:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#72d1eb), color-stop(53%, #817eae), to(#B29DE6));
-  background: linear-gradient(to right, #72d1eb 0%, #817eae 53%, #B29DE6 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#F1A9A0), color-stop(53%, #c985ca), to(#B29DE6));
+  background: linear-gradient(to right, #F1A9A0 0%, #c985ca 53%, #B29DE6 100%);
   border: none;
 }
 
 .ficha .ficha__text {
-  color: #ffffff;
+  color: #f6f6f6;
 }
 
 .ficha .ficha__text:hover {
@@ -446,7 +442,7 @@ p {
 }
 
 .ficha .ficha__i {
-  color: #ffffff;
+  color: #f6f6f6;
   -webkit-transition: 400ms;
   transition: 400ms;
   text-decoration: none;
@@ -471,11 +467,11 @@ p {
 }
 
 .ficha2 .ficha2__text {
-  color: #ffffff;
+  color: #f6f6f6;
 }
 
 .ficha2 .ficha2__i {
-  color: #ffffff;
+  color: #f6f6f6;
   -webkit-transition: 400ms;
   text-decoration: none;
 }
@@ -485,7 +481,7 @@ p {
 }
 
 .recibe__Icon {
-  color: #72d0eb;
+  color: #F1A9A0;
   -webkit-transform: scale(4);
           transform: scale(4);
   -webkit-transition: 600ms;
@@ -498,7 +494,7 @@ p {
 .recibe__Icon:hover {
   -webkit-transform: scale(4.3);
           transform: scale(4.3);
-  background: linear-gradient(200deg, #72d0eb 0%, #b968a5 100%);
+  background: linear-gradient(200deg, #F1A9A0 0%, #b968a5 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -524,11 +520,11 @@ p {
     margin-bottom: 1em;
     -webkit-transform: scale(4);
             transform: scale(4);
-    color: #72d0eb;
+    color: #F1A9A0;
     padding: 0.5em;
   }
   .servicios .servicios__icon:hover {
-    color: #ffffff;
+    color: #f6f6f6;
   }
   .servicios__items {
     margin-top: 0px;
@@ -626,7 +622,7 @@ p {
   .servicios:hover {
     -webkit-box-shadow: 0px 0px 0px 0px;
             box-shadow: 0px 0px 0px 0px;
-    border-color: #72d0eb;
+    border-color: #F1A9A0;
   }
   .servicios .servicios__icon {
     margin-top: 3.8em;
@@ -634,11 +630,11 @@ p {
     margin-left: 2em;
     -webkit-transform: scale(3.5);
             transform: scale(3.5);
-    color: #72d0eb;
+    color: #F1A9A0;
     padding: 0.5em;
   }
   .servicios .servicios__icon:hover {
-    color: #72d0eb;
+    color: #F1A9A0;
   }
   .servicios__img {
     overflow-x: visible;
@@ -709,7 +705,7 @@ p {
 
 footer {
   background-color: #020202;
-  border-top: #72d0eb 1px solid;
+  border-top: #F1A9A0 1px solid;
   margin-top: 1.25em;
   margin-right: 1em;
   margin-bottom: 20px;
@@ -718,19 +714,19 @@ footer {
 footer h5 {
   margin-top: 1.5em;
   margin-bottom: -0.3em;
-  color: #ffffff;
+  color: #f6f6f6;
   font-size: 1rem;
 }
 
 footer a {
   text-decoration: none;
-  color: #ffffff;
+  color: #f6f6f6;
 }
 
 footer a:hover {
   -webkit-transform: scale(4.3);
           transform: scale(4.3);
-  background: linear-gradient(200deg, #72d0eb 0%, #b968a5 100%);
+  background: linear-gradient(200deg, #F1A9A0 0%, #b968a5 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
