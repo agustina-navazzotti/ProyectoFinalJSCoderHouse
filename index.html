@@ -3,70 +3,65 @@
 <head>
     <meta charset=utf-8>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Simulador interactivo de gestionador de tareas y horarios">
+	<meta name="description" content="Crea un lista de tareas, marca pendientes como resultos y más!">
  	<meta name="keywords" content="tareas, horarios, gestionar, task, checklist">
-    <link rel="icon" type="image/png" href="media/" sizes="32x32">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="media/" sizes="32x32">
+	<link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Click task - Gestionador de tareas</title>
+	<script src="https://kit.fontawesome.com/b3a3e5b7d6.js" crossorigin="anonymous"></script>
+    <title>Lista de tareas</title>
 </head>
 <body>
     <header>
 		<nav>
             <a href="index.html">
-				<img src="media/isotipoClickTask.svg" alt="Isologotipo " width="15px">
+				<img src="media/isotipoClickTask.svg" alt="Isologotipo" width="15px">
             </a>
             <button aria-label="abrir menú">
                 <i class="bi bi-three-dots"></i>
 			</button>
 			<ul>
 			   <li><a href="pages/tareas.html">Tareas</a></li>
-			   <li><a href="pages/horarios.html">Horarios</a></li>
+			   <li><a href="pages/contacto.html">Contacto</a></li>
 			</ul>
-            <!-- <button>
-				<i class="bi bi-moon-stars-fill"></i>
-			</button>
-            <button>
-				<i class="bi bi-sun-fill"></i>
-			</button>
-        -->
 		</nav>
 	</header>
-    <div class="textoCentrado recibe type-regular">
-        <i class="bi bi-calendar-check-fill recibe__Icon"></i>
-        <h3 class="type-h2 c-blanco">Tu lista de tareas</h3>
-        <p>Gestionar tus tareas nunca fue tan fácil</p>
-    </div>
-    <section>
-		<h3 class="type-h2 c-blanco type-medium textoCentrado margenDiv">¿Qué necesitas organizar?</h3>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="card mb-3 col-12 col-md-6 col-xl-5 offset-xl-1 servicios">
-					<div class="row no-gutters">
-						<div class="col-12 col-md-9 col-xl-8">
-							<div class="card-body textoIzquierda">
-								<h3 class="type-h3">Tareas</h3>
-							</div>
-						</div>
-					</div>
+	<div class="tarea__banner--titulo">
+		<h3 class="type-h1 type-regular mt-10 type-extra">🙀</h3>
+		<h3 class="type-h4 type-regular c-blanco">¡Cargá una nueva tarea!</h3>
+	</div>
+	<section>
+		<form class="forms" id="formulario">
+				<input type="text" name="task" placeholder="¿Qué tarea queres realizar?" autocomplete="off" class="forms__input col-12 col-md-12 col-lg-8" id="tarea" aria-describedby="inputGroupPrepend" required/>
+				<div>
+					<button type="submit" class="tarea__button" id="btnTask"><i class="bi bi-arrow-up-circle-fill" alt="Cargar nueva tarea"></i></button>
 				</div>
-				<div class="card mb-3 col-12 col-md-6 col-xl-5 offset-xl-1 servicios">
-					<div class="row no-gutters">
-						<div class="col-12 col-md-9 col-xl-8 order1">
-							<div class="card-body textoDerecha">
-								<h3 class="type-h3">Horarios</h3>
-							</div>
-						</div>
-					</div>
+		</form>
+	</section>
+	<section class="row" id="new">
+			<div class="col-12 col-md-4 col-lg-6 text-center">
+				<div id="lista-tareas">
+					<div class= "text-center type-regular type-h2 c-blanco">¡Día libre!</div>
+					<div class= "text-center type-thin type-5 c-blanco mt-3">Juegá con tu michi, mirá una peli o llamá a tu amigx ❤️</div>
 				</div>
 			</div>
-		</div>
 	</section>
 <footer class="textoCentrado">
-    <h5 class="type-light">¿Tenes sugencias? Escribime ♥</h5>
-</footer>    
-    <script src="js/menu.js"></script>    
-    <script src="js/index.js"></script>
+    <h5 class="type-light">¿Tenes sugerencias? Escribime 🤍</h5>
+</footer>
+<template id="template-tarea">
+	<div  class="mt-3 d-flex justify-content-between ficha fichaB aling-items-center">
+		<p class="ficha__text type-light">Tarea #1</p>
+		<div class="center">
+			<i class="fa-solid fa-paw c-blanco colorIconfts type-h3" role="button"></i>
+			<i class="fa-solid fa-broom c-blanco colorIconfts type-h3" role="button"></i>
+		</div>
+	</div>
+</template>
+    <script src="js/variables.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
